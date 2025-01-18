@@ -1,5 +1,6 @@
 @import './header.scss';
 @import './terms-and-policy.scss';
+@import './hero.scss';
 
 :root {
   font-family: Lato, Roboto Slab, sans-serif;
@@ -21,7 +22,7 @@
 body {
   width: 320px;
   margin: 0 auto;
-  padding-top: 80px;
+  padding-top: 68px;
 
   @include media(desktop) {
     width: 1200px;

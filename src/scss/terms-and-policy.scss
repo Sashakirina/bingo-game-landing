@@ -16,6 +16,10 @@
 
 .section-terms-policy {
   padding: 40px 16px;
+
+  @include media(desktop) {
+    padding: 64px 127px;
+  }
 }
 
 .terms-policy-wrapper {
@@ -68,6 +72,10 @@
   line-height: 1.5em;
   list-style-type: disc;
   list-style-position: inside;
+}
+
+.policy-list {
+  color: $_white;
 }
 
 .terms-email {

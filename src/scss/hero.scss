@@ -1,0 +1,86 @@
+.hero-section {
+  background-image: url(../img/hero/hero-desk.png);
+  background-size: 1200px 660px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 660px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 24px 30px;
+  gap: 24px;
+  margin-bottom: 64px;
+
+  @include media(to-desktop) {
+    background-image: none;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+}
+
+.hero-img {
+  width: 320px;
+  height: 144.451px;
+
+  @include media(desktop) {
+    display: none;
+  }
+}
+
+.hero-title {
+  color: $_golden;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: $_dark_blue;
+  font-family: 'Roboto Slab';
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 1.11em;
+  width: 450px;
+
+  @include media(to-desktop) {
+    font-size: 40px;
+    line-height: 1.25em;
+    letter-spacing: -0.4px;
+    text-align: center;
+    width: 288px;
+  }
+}
+
+.btn-link {
+  display: flex;
+  width: 267px;
+  height: 70px;
+  padding: 8px 24px;
+  align-items: center;
+  gap: 24px;
+  border-radius: 12px;
+  border: 1px solid $_dark_blue;
+  background: $_orange;
+  color: $_dark_blue;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.3em;
+
+  @include media(to-desktop) {
+    width: 288px;
+  }
+}
+
+.btn-link:hover {
+  border: 2px solid $_dark_blue;
+  background: $_golden;
+}
+
+.icon-play {
+  width: 48px;
+  height: 48px;
+}
+
+.accent-hero {
+  font-size: 24px;
+  font-weight: 700;
+}

@@ -1,4 +1,5 @@
 @import './header.scss';
+@import './terms-and-policy.scss';
 
 :root {
   font-family: Lato, Roboto Slab, sans-serif;
@@ -7,7 +8,7 @@
   font-weight: 400;
   scroll-behavior: smooth;
 
-  color: #242424;
+  color: $_golden;
   background-color: $_dark_blue;
 
   font-synthesis: none;

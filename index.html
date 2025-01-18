@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/bingo-game-landing/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/bingo-game-landing/fav-16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Legendary Hero Bingo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,13 +11,62 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="node_modules/modern-normalize/modern-normalize.css"
+    />
     
     <script type="module" crossorigin src="/bingo-game-landing/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/bingo-game-landing/assets/index-84daa937.css">
+    <link rel="stylesheet" href="/bingo-game-landing/assets/index-51e8154a.css">
   </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
+  <div class="header-wrapper">
+    <img src="/bingo-game-landing/assets/logo-65f0956a.png" alt="game logo" class="logo" />
+    <p class="name">Legendary Hero Bingo</p>
+  </div>
+
   <nav class="nav">
+    <ul class="header-wrapper">
+      <li class="nav-item active">
+        <a href="#hero" class="nav-link"> Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#about" class="nav-link"> About Us</a>
+      </li>
+      <li class="nav-item">
+        <a href="#benefits" class="nav-link"> Benefits</a>
+      </li>
+      <li class="nav-item">
+        <a href="#how-to-play" class="nav-link"> How to Play</a>
+      </li>
+      <li class="nav-item">
+        <a href="#faq" class="nav-link"> FAQ</a>
+      </li>
+      <li class="nav-item">
+        <a href="#reviews" class="nav-link"> User Reviews</a>
+      </li>
+      <li class="nav-item">
+        <a href="#gallery" class="nav-link"> Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a href="#why-us" class="nav-link"> Why Us</a>
+      </li>
+      <li class="nav-item">
+        <a href="#download" class="nav-link"> Download Now</a>
+      </li>
+    </ul>
+  </nav>
+
+  <button type="button" class="burger-btn">
+    <img
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACySURBVHgB7dkxroFBFIbhM/dWoqGgtgcLsgY7YAe2YEHWQE3zN5QOEoVCYiIZEXmeaoqvOpnujQAAAAAAAABaKjWj/mg6yxKr63MQ3OxKxuJ42KxfDasO3BtPt9fhJHjUnfab4avRX1Qofu4T2dWsqg58zpxn5C64y67k/zIAAAAAAAB+gqr8HlX5A1TltlTlhlRlAAAAAADgl6jK71GVP0BVbktVbkhVBgAAAAAAgG9xAYhBSk29sW8BAAAAAElFTkSuQmCC"
+      alt="burger-icon"
+      class="burger-icon"
+    />
+  </button>
+
+  <!-- <nav class="nav">
     <ul class="nav-list">
       <li class="nav-item">
         <a href="./page-2.html" class="nav-link">Page 2</a>
@@ -27,9 +76,53 @@
         <a href="./page-3.html" class="nav-link">Page 3</a>
       </li>
     </ul>
-  </nav>
+  </nav> -->
 </header>
 
+<div class="modal-wrapper">
+  <div class="nav-modal">
+    <div class="close-wrapper">
+      <button type="button" class="close-btn">
+        <img
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ4SURBVHgB7dtNTttQFMXx+2KpatNJO6BSO+oSqrIRdlAYdthhZ7ADdkBYDwLBCoAJCDKACRESKMZnAApWnPBx37vH0vlJCHAkSP5yrNj32UxEREREREREREREREREeuXzyuqf4bfVq+brGD8budzPN5mzT80Tbf7oz6d/UNv6zXh/1wghaJ1sNLPpenK5/9UcDcxZE/fL7O94AYx78py4jfranLkHntb1v/Y2tsjz4+LdVm2Zs8qc3U/OD6vh99OU0tqzB5KtfRj+OLmbnB9ZoO64g42b8d7InLkHBtbIpeNClsDAFjkiLmQLDCyRo+JC1sAQHTkyLmQPDFGRo+NCkcBQOjJDXCgWGEpFZokLRQND7shMcaF4YMgVmS0uhAQG78iMcSEsMHhFZo0LoYHhvZGZ40J4YHhrZPa4QBEYXhu5D3GBJjC8NHJf4oL7yMjDx5Xf64OUdtrbMX7C977EBcrA0BV5Hta4QHWImNV5uGhhjgu0gWFZZPa44D709FbhyNtpuuAxDtR7cNenhSckg9RFaAMvjfuIPDLlIWLR59xpXW+0t7MubgG6PXjZSQT7uos2qsAvPUPrU2SawK89/e1LZIrAb7220IfI4YHfe+GGPXJoYK+rYsyRwwJ7X3JkjRwSONf1XMbIxQPnvljOFrlo4FKTCKbIxQKXHvOwRC4SOGqGxhA5e+DoAWV05KyBWaa/kZGzBWYbrUdFzhKYdd1CRGT3wOyLQkpH9r/TM9lmexvb9Pd2fDDqmIxsm7Ps9yqzjtbnR/a/V9n9ENG8/S6ayr+wZCjV1V/mdQuPh4uZ5/v/bnJ2aCIiIiIiIiIiIiIiIiLSGw9EIL+mfF4RwQAAAABJRU5ErkJggg=="
+          alt="close icon"
+          class="close-icon"
+        />
+      </button>
+    </div>
+
+    <ul class="nav-list-mob">
+      <li class="nav-item-mob">
+        <a href="#hero" class="nav-link-mob"> Home</a>
+      </li>
+      <li class="nav-item-mob">
+        <a href="#about" class="nav-link-mob"> About Us</a>
+      </li>
+      <li class="nav-item-mob">
+        <a href="#benefits" class="nav-link-mob"> Benefits</a>
+      </li>
+      <li class="nav-item-mob">
+        <a href="#how-to-play" class="nav-link-mob"> How to Play</a>
+      </li>
+      <li class="nav-item-mob">
+        <a href="#faq" class="nav-link-mob"> FAQ</a>
+      </li>
+      <li class="nav-item-mob">
+        <a href="#reviews" class="nav-link-mob"> User Reviews</a>
+      </li>
+      <li class="nav-item-mob">
+        <a href="#gallery" class="nav-link-mob"> Gallery</a>
+      </li>
+      <li class="nav-item-mob">
+        <a href="#why-us" class="nav-link-mob"> Why Us</a>
+      </li>
+      <li class="nav-item-mob">
+        <a href="#download" class="nav-link-mob"> Download Now</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
     
     
     
@@ -39,7 +132,7 @@
     
     
 
-    <section>
+    <section class="section">
       <h1>Example page title</h1>
       <!-- Path to images as from index.html file -->
       <img src="/bingo-game-landing/assets/javascript-8dac5379.svg" alt="" />

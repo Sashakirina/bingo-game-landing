@@ -1,0 +1,81 @@
+.faq-section {
+  padding: 40px;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 600;
+  color: rgba(212, 161, 0, 1);
+  margin-bottom: 64px;
+  line-height: 64px;
+}
+
+.faq-list li {
+  padding: 22px 64px;
+  background-color: rgba(25, 52, 116, 1);
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 24px 0;
+  line-height: 36px;
+  border-radius: 4px;
+  border: 1px solid rgba(244, 154, 56, 1);
+  position: relative;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.faq-toggle img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.faq-answer {
+  margin-top: 16px;
+  display: none; /* По умолчанию скрыт */
+  font-size: 20px;
+  font-weight: 400;
+  color: #e6e6e6;
+}
+
+.faq-list li.open .faq-answer {
+  display: block; /* Показывать при раскрытии */
+}
+
+.faq-list li.open .faq-toggle img {
+  transform: rotate(180deg); /* Поворот стрелки */
+}
+
+.faq-list li::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -27px; /* Расстояние от левого края */
+  width: 55px; /* Ширина ромба */
+  height: 55px; /* Высота ромба */
+  background-color: #861015; /* Цвет ромба */
+  transform: translateY(-50%) rotate(45deg); /* Центрирование и поворот ромба */
+  border-radius: 2px; /* Скругление углов ромба */
+}
+.faq-toggle img {
+  width: 12px; /* Укажите желаемую ширину */
+  height: 6px; /* Укажите желаемую высоту */
+}
+
+/* Дополнительно можно задать, чтобы иконка не растягивалась */
+.faq-toggle img {
+  object-fit: contain; /* Обеспечивает корректное отображение изображения */
+}

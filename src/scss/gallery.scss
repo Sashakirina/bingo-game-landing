@@ -1,0 +1,118 @@
+.gallery-section {
+  text-align: center;
+  margin: 20px auto;
+  position: relative;
+}
+
+.gallery-back {
+  background-size: contain; /* Обеспечивает сохранение пропорций */
+  background-repeat: no-repeat; /* Запрещает повторение фонового изображения */
+  background-position: center;
+  background-image: url('../img/gallery/gallery-frame-desk.png'); /* Фон для десктопа */
+}
+
+/* Заголовок */
+.gallery-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 64px;
+  color: #d4a100;
+  margin-bottom: 64px;
+}
+
+/* Контейнер галереи */
+.gallery-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-size: contain; /* Измените на 'contain' для корректного масштабирования */
+  background-repeat: no-repeat; /* Запретите повторение фонового изображения */
+  background-position: center; /* Центрирование фонового изображения */
+  width: 100%; /* Задайте ширину контейнера */
+  height: auto; /* Автоматическая высота для адаптивности */
+  padding: 112px 72px; /* Отступы для корректного отображения */
+}
+
+/* Кнопки переключения */
+.gallery-btn {
+  background-color: #ffa800; /* Оранжевый */
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 64px;
+  margin-right: 64px;
+}
+
+.gallery-btn img {
+  width: 100%; /* Изображение занимает всю кнопку */
+  height: auto;
+}
+
+.gallery-btn:hover {
+  background-color: #e09000;
+}
+
+/* Блок изображения */
+.gallery-image-wrapper {
+  width: 50%;
+  padding: 10px;
+  border: 4px solid #ffa800;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.gallery-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Адаптивность для мобильной версии */
+@media (max-width: 768px) {
+  .gallery-section {
+    background-image: url('img/gallery/gallery-frame-mobile.png'); /* Фон для мобильных */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .gallery-title {
+    font-size: 1.5rem; /* Меньше размер шрифта для мобильных устройств */
+  }
+
+  .gallery-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem; /* Уменьшаем кнопки для мобильных */
+  }
+
+  .gallery-image-wrapper {
+    width: 90%; /* Увеличиваем изображение на мобильных */
+  }
+
+  .btn-img-desktop {
+    display: none; /* Скрыть изображения для десктопа на мобильных устройствах */
+  }
+
+  .btn-img-mobile {
+    display: block; /* Показать изображения для мобильных на мобильных устройствах */
+  }
+}
+
+@media (min-width: 769px) {
+  .btn-img-desktop {
+    display: block; /* Показать изображения для десктопа на десктопах */
+  }
+
+  .btn-img-mobile {
+    display: none; /* Скрыть изображения для мобильных на десктопах */
+  }
+}

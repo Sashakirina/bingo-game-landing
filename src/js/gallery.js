@@ -17,20 +17,26 @@ function initGallery() {
 
   const galleryImage = galleryContainer.querySelector('.gallery-image');
   galleryImage.src = images[currentImageIndex];
+  console.log(`Image loaded: ${images[currentImageIndex]}`);
 
   prevBtn.addEventListener('click', () => {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
     galleryImage.src = images[currentImageIndex];
+    console.log(
+      `Prev button clicked, current image: ${images[currentImageIndex]}`
+    );
   });
 
   nextBtn.addEventListener('click', () => {
     currentImageIndex = (currentImageIndex + 1) % images.length;
     galleryImage.src = images[currentImageIndex];
+    console.log(
+      `Next button clicked, current image: ${images[currentImageIndex]}`
+    );
   });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Wait for <load> tags to process and replace themselves
   const loadTags = document.querySelectorAll('load');
   const promises = Array.from(loadTags).map(async loadTag => {
     const src = loadTag.getAttribute('src');
@@ -42,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
           const wrapper = document.createElement('div');
           wrapper.innerHTML = html;
           loadTag.replaceWith(wrapper);
+          console.log(`Loaded content from ${src}`);
         } else {
           console.error(`Failed to load ${src}: ${response.statusText}`);
         }
@@ -54,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   Promise.all(promises).then(() => {
-    // Initialize the gallery after all <load> tags are processed
+    console.log('All <load> tags processed');
     initGallery();
   });
 });

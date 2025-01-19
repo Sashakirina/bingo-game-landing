@@ -1,0 +1,139 @@
+.user-reviews {
+  text-align: center;
+
+  @include media(desktop) {
+    /* Дополнительные стили для desktop */
+  }
+}
+
+.h2reviews {
+  color: $_golden;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 52px;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 48px;
+    line-height: 64px;
+    margin-bottom: 64px;
+  }
+}
+
+.reviews-picture {
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  width: 288px;
+  margin: 0 auto;
+
+  @include media(desktop) {
+    width: 330px;
+  }
+}
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+
+  @include media(desktop) {
+    display: flex;
+flex-direction: row;
+    flex-wrap: wrap; /* Разрешить перенос элементов на следующий ряд */
+
+  }
+}
+
+.review-slot {
+
+  border-top-left-radius: 0; /* Верхний левый угол не скруглен */
+  border-top-right-radius: 0; /* Верхний правый угол не скруглен */
+  border-bottom-left-radius: 4px; /* Нижний левый угол скруглен */
+  border-bottom-right-radius: 4px; /* Нижний правый угол скруглен */
+  text-align: center;
+  background-color: #f49a38;
+
+  @include media(desktop) {
+  width: 364px;
+  }
+}
+
+
+
+.bingo-cubes {
+  display: flex;
+  justify-content: center;
+
+  @include media(desktop) {
+    /* Дополнительные стили для desktop */
+  }
+}
+
+.cube {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 21px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #0a1633;
+  margin-bottom: 24px;
+
+  @include media(desktop) {
+    padding: 2px 28.5px;
+  }
+}
+
+.cube-b {
+  background-color: #861015;
+}
+
+.cube-i {
+  background-color: #d4a100;
+}
+
+.cube-n {
+  background-color: #096a43;
+}
+
+.cube-g {
+  background-color: #0e3da4;
+}
+
+.cube-o {
+  background-color: #8313b3;
+}
+
+.namebingo {
+  color: #0a1633;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 12px;
+}
+
+.star-rating {
+  margin: 0 auto;
+  width: 140px;
+  margin-bottom: 12px;
+
+  @include media(desktop) {
+    /* Дополнительные стили для desktop */
+  }
+}
+
+.review-slot .textbingo {
+  font-style: italic;
+  font-size: 24px;
+  line-height: 30px;
+  color: #0a1633;
+  margin-bottom: 24px;
+
+  @include media(desktop) {
+    font-size: 16px;
+  }
+}

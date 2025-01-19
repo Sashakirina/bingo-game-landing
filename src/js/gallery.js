@@ -17,7 +17,7 @@ function initGallery() {
 
   const galleryImage = galleryContainer.querySelector('.gallery-image');
   galleryImage.src = images[currentImageIndex];
-  console.log(`Image loaded: ${images[currentImageIndex]}`);
+  console.log(`Attempting to load image: ${images[currentImageIndex]}`);
 
   prevBtn.addEventListener('click', () => {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
@@ -25,6 +25,7 @@ function initGallery() {
     console.log(
       `Prev button clicked, current image: ${images[currentImageIndex]}`
     );
+    console.log(`Attempting to load image: ${images[currentImageIndex]}`);
   });
 
   nextBtn.addEventListener('click', () => {
@@ -33,6 +34,7 @@ function initGallery() {
     console.log(
       `Next button clicked, current image: ${images[currentImageIndex]}`
     );
+    console.log(`Attempting to load image: ${images[currentImageIndex]}`);
   });
 }
 

@@ -3,10 +3,10 @@ function initGallery() {
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
   const images = [
-    'img/gallery/gallery-1.png',
-    'img/gallery/gallery-2.png',
-    'img/gallery/gallery-3.png',
-    'img/gallery/gallery-4.png',
+    './img/gallery/gallery-1.png',
+    './img/gallery/gallery-2.png',
+    './img/gallery/gallery-3.png',
+    './img/gallery/gallery-4.png',
   ];
   let currentImageIndex = 0;
 

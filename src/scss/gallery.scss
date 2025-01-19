@@ -8,7 +8,7 @@
   background-size: contain; /* Обеспечивает сохранение пропорций */
   background-repeat: no-repeat; /* Запрещает повторение фонового изображения */
   background-position: center;
-  background-image: url('../img/gallery/gallery-frame-desk.png'); /* Фон для десктопа */
+  background-image: url('/img/gallery/gallery-frame-desk.png'); /* Фон для десктопа */
 }
 
 /* Заголовок */
@@ -79,7 +79,7 @@
 /* Адаптивность для мобильной версии */
 @media (max-width: 768px) {
   .gallery-section {
-    background-image: url('img/gallery/gallery-frame-mobile.png'); /* Фон для мобильных */
+    background-image: url('/img/gallery/gallery-frame-mobile.png'); /* Фон для мобильных */
     background-size: cover;
     background-position: center;
   }

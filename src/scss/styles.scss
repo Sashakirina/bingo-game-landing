@@ -5,8 +5,6 @@
 @import './faq.scss';
 @import './gallery.scss';
 
-
-
 :root {
   font-family: Lato, Roboto Slab, sans-serif;
   font-size: 16px;
@@ -27,9 +25,19 @@
 body {
   width: 320px;
   margin: 0 auto;
-  padding-top: 68px;
 
   @include media(desktop) {
     width: 1200px;
   }
+}
+
+main {
+  padding-top: 68px;
+}
+
+[id]::before {
+  content: '';
+  display: block;
+  height: 68px;
+  margin-top: -68px;
 }

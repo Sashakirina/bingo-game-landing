@@ -1,14 +1,13 @@
 .section-about {
   padding: 0 16px;
-  padding-top: 68px;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  margin-bottom: 64px;
 
   @include media(desktop) {
     gap: 64px;
     padding: 0 30px;
-    padding-top: 68px;
   }
 }
 

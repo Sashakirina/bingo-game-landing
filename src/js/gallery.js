@@ -1,55 +1,55 @@
-const initGallery = () => {
-  const galleryContainer = document.querySelector('.gallery-container');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  const images = [
-    'img/gallery/gallery-1.png',
-    'img/gallery/gallery-2.png',
-    'img/gallery/gallery-3.png',
-    'img/gallery/gallery-4.png',
-  ];
+// const initGallery = () => {
+//   const galleryContainer = document.querySelector('.gallery-container');
+//   const prevBtn = document.querySelector('.prev-btn');
+//   const nextBtn = document.querySelector('.next-btn');
+//   const images = [
+//     'img/gallery/gallery-1.png',
+//     'img/gallery/gallery-2.png',
+//     'img/gallery/gallery-3.png',
+//     'img/gallery/gallery-4.png',
+//   ];
 
-  const links = document.querySelectorAll('.gallery-link');
-  let currentImageIndex = 0;
+//   const links = document.querySelectorAll('.gallery-link');
+//   let currentImageIndex = 0;
 
-  if (!galleryContainer || !prevBtn || !nextBtn || !links.length) {
-    console.error('Gallery elements not found in the DOM');
-    return;
-  }
+//   if (!galleryContainer || !prevBtn || !nextBtn || !links.length) {
+//     console.error('Gallery elements not found in the DOM');
+//     return;
+//   }
 
-  const updateGallery = index => {
-    links.forEach((link, i) => {
-      if (i === index) {
-        link.classList.remove('hidden');
-        galleryContainer.querySelector('.gallery-image').src = images[i];
-      } else {
-        link.classList.add('hidden');
-      }
-    });
-  };
+//   const updateGallery = index => {
+//     links.forEach((link, i) => {
+//       if (i === index) {
+//         link.classList.remove('hidden');
+//         galleryContainer.querySelector('.gallery-image').src = images[i];
+//       } else {
+//         link.classList.add('hidden');
+//       }
+//     });
+//   };
 
-  updateGallery(currentImageIndex);
+//   updateGallery(currentImageIndex);
 
-  prevBtn.addEventListener('click', () => {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    updateGallery(currentImageIndex);
-  });
+//   prevBtn.addEventListener('click', () => {
+//     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+//     updateGallery(currentImageIndex);
+//   });
 
-  nextBtn.addEventListener('click', () => {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    updateGallery(currentImageIndex);
-  });
+//   nextBtn.addEventListener('click', () => {
+//     currentImageIndex = (currentImageIndex + 1) % images.length;
+//     updateGallery(currentImageIndex);
+//   });
 
-  baguetteBox.run('.gallery-container');
+//   baguetteBox.run('.gallery-container');
 
-  document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') {
-      const closeButtons = document.querySelectorAll('.baguetteBox-close');
-      closeButtons.forEach(button => button.click());
-    }
-  });
-};
+//   document.addEventListener('keydown', event => {
+//     if (event.key === 'Escape') {
+//       const closeButtons = document.querySelectorAll('.baguetteBox-close');
+//       closeButtons.forEach(button => button.click());
+//     }
+//   });
+// };
 
-document.addEventListener('DOMContentLoaded', () => {
-  initGallery();
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//   initGallery();
+// });

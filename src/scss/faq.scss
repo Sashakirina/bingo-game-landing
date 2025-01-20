@@ -8,12 +8,18 @@
 }
 
 .faq-title {
+  color: $_golden;
   text-align: center;
-  font-size: 48px;
+  font-size: 36px;
   font-weight: 600;
-  color: rgba(212, 161, 0, 1);
-  margin-bottom: 64px;
-  line-height: 64px;
+  line-height: 52px;
+  margin-bottom: 32px;
+
+  @include media(desktop) {
+    font-size: 48px;
+    line-height: 64px;
+    margin-bottom: 64px;
+  }
 }
 
 .faq-list li {

@@ -1,8 +1,10 @@
-/* Основные стили для галереи */
 .gallery-section {
   text-align: center;
-  margin: 20px auto;
-  position: relative;
+  margin-top: 64px;
+
+  @include media(desktop) {
+    margin-top: 120px;
+  }
 }
 
 .gallery-back {

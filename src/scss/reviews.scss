@@ -1,10 +1,13 @@
 .user-reviews {
   text-align: center;
+  margin-top: 64px;
 
   @include media(desktop) {
-    /* Дополнительные стили для desktop */
+  margin-top: 120px;
   }
 }
+
+
 
 .h2reviews {
   color: $_golden;

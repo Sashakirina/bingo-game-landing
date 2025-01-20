@@ -17,20 +17,18 @@ const initGallery = () => {
     return;
   }
 
+  // Обновление видимости изображений
   const updateGallery = index => {
     links.forEach((link, i) => {
       if (i === index) {
-        link.classList.remove('hidden');
-        galleryContainer.querySelector('.gallery-image').src = images[i];
+        link.classList.remove('hidden'); // Показать текущее изображение
       } else {
-        link.classList.add('hidden');
+        link.classList.add('hidden'); // Скрыть остальные
       }
     });
   };
 
-  // Установить начальное изображение
-  updateGallery(currentImageIndex);
-
+  // Обработчики кнопок
   prevBtn.addEventListener('click', () => {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
     updateGallery(currentImageIndex);
@@ -41,7 +39,7 @@ const initGallery = () => {
     updateGallery(currentImageIndex);
   });
 
-  // Initialize baguetteBox for lightbox functionality
+  // Initialize baguetteBox для lightbox функциональности
   baguetteBox.run('.gallery-container');
 
   document.addEventListener('keydown', event => {

@@ -17,19 +17,17 @@ const initGallery = () => {
     return;
   }
 
-  // Показать текущее изображение, скрыть остальные
   const updateGallery = index => {
     links.forEach((link, i) => {
       if (i === index) {
-        link.classList.remove('hidden'); // Показать текущее изображение
-        galleryContainer.querySelector('.gallery-image').src = images[i]; // Обновить src
+        link.classList.remove('hidden');
+        galleryContainer.querySelector('.gallery-image').src = images[i];
       } else {
-        link.classList.add('hidden'); // Скрыть остальные
+        link.classList.add('hidden');
       }
     });
   };
 
-  // Установить начальное состояние
   updateGallery(currentImageIndex);
 
   prevBtn.addEventListener('click', () => {
@@ -42,7 +40,6 @@ const initGallery = () => {
     updateGallery(currentImageIndex);
   });
 
-  // Initialize baguetteBox for lightbox functionality
   baguetteBox.run('.gallery-container');
 
   document.addEventListener('keydown', event => {

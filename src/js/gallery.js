@@ -27,10 +27,19 @@ function initGallery() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
     galleryImage.src = images[currentImageIndex];
   });
+
+  // Initialize baguetteBox for lightbox functionality
+  baguetteBox.run('.gallery-container');
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      const closeButtons = document.querySelectorAll('.baguetteBox-close');
+      closeButtons.forEach(button => button.click());
+    }
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Wait for <load> tags to process and replace themselves
   const loadTags = document.querySelectorAll('load');
   const promises = Array.from(loadTags).map(async loadTag => {
     const src = loadTag.getAttribute('src');
@@ -54,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   Promise.all(promises).then(() => {
-    // Initialize the gallery after all <load> tags are processed
     initGallery();
   });
 });

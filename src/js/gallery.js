@@ -29,8 +29,6 @@ const initGallery = () => {
   };
 
   // Установить начальное изображение
-  galleryContainer.querySelector('.gallery-image').src =
-    images[currentImageIndex];
   updateGallery(currentImageIndex);
 
   prevBtn.addEventListener('click', () => {

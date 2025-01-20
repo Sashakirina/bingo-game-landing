@@ -1,26 +1,13 @@
 .section-about {
-  padding: 0 16px;
+  padding: 68px 16px 0 16px;
   display: flex;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 64px;
+  padding-top: 68px;
 
   @include media(desktop) {
     gap: 64px;
-    padding: 0 30px;
-  }
-}
-
-.about-title {
-  color: $_golden;
-  text-align: center;
-  font-family: 'Roboto Slab';
-  font-size: 36px;
-  font-weight: 600;
-  line-height: 1.44em;
-
-  @include media(desktop) {
-    font-size: 48px;
+    padding: 68px 30px 0 30px;
   }
 }
 

@@ -5,7 +5,7 @@
 @import './faq.scss';
 @import './gallery.scss';
 @import './reviews.scss';
-
+@import './benefits.scss';
 
 :root {
   font-family: Lato, Roboto Slab, sans-serif;
@@ -37,9 +37,15 @@ main {
   padding-top: 68px;
 }
 
-[id]::before {
-  content: '';
-  display: block;
-  height: 68px;
-  margin-top: -68px;
+.title {
+  color: $_golden;
+  text-align: center;
+  font-family: 'Roboto Slab';
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.44em;
+
+  @include media(desktop) {
+    font-size: 48px;
+  }
 }

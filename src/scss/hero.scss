@@ -10,13 +10,12 @@
   justify-content: flex-start;
   padding: 24px 30px;
   gap: 24px;
-  margin-bottom: 64px;
 
   @include media(to-desktop) {
     background-image: none;
     padding: 0;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     height: auto;
   }
 }

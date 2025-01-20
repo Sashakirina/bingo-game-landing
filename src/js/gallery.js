@@ -1,4 +1,4 @@
-function initGallery() {
+const initGallery = () => {
   const galleryContainer = document.querySelector('.gallery-container');
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
@@ -8,8 +8,6 @@ function initGallery() {
     'img/gallery/gallery-3.png',
     'img/gallery/gallery-4.png',
   ];
-
-  console.log('Images array:', images); // Log the images array
 
   const links = document.querySelectorAll('.gallery-link');
   let currentImageIndex = 0;
@@ -30,6 +28,7 @@ function initGallery() {
     });
   };
 
+  // Установить начальное изображение
   updateGallery(currentImageIndex);
 
   prevBtn.addEventListener('click', () => {
@@ -51,32 +50,8 @@ function initGallery() {
       closeButtons.forEach(button => button.click());
     }
   });
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
-  const loadTags = document.querySelectorAll('load');
-  const promises = Array.from(loadTags).map(async loadTag => {
-    const src = loadTag.getAttribute('src');
-    if (src) {
-      try {
-        const response = await fetch(src);
-        if (response.ok) {
-          const html = await response.text();
-          const wrapper = document.createElement('div');
-          wrapper.innerHTML = html;
-          loadTag.replaceWith(wrapper);
-        } else {
-          console.error(`Failed to load ${src}: ${response.statusText}`);
-        }
-      } catch (error) {
-        console.error(`Error loading ${src}:`, error);
-      }
-    } else {
-      console.warn('<load> tag is missing "src" attribute.');
-    }
-  });
-
-  Promise.all(promises).then(() => {
-    initGallery();
-  });
+  initGallery();
 });

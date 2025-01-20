@@ -1,3 +1,4 @@
+/* Основные стили для галереи */
 .gallery-section {
   text-align: center;
   margin: 20px auto;
@@ -5,13 +6,12 @@
 }
 
 .gallery-back {
-  background-size: contain; /* Обеспечивает сохранение пропорций */
-  background-repeat: no-repeat; /* Запрещает повторение фонового изображения */
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
-  background-image: url('/img/gallery/gallery-frame-desk.png'); /* Фон для десктопа */
+  background-image: url('/img/gallery/gallery-frame-desk.png');
 }
 
-/* Заголовок */
 .gallery-title {
   font-weight: 600;
   font-size: 48px;
@@ -20,23 +20,21 @@
   margin-bottom: 64px;
 }
 
-/* Контейнер галереи */
 .gallery-container {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  background-size: contain; /* Измените на 'contain' для корректного масштабирования */
-  background-repeat: no-repeat; /* Запретите повторение фонового изображения */
-  background-position: center; /* Центрирование фонового изображения */
-  width: 100%; /* Задайте ширину контейнера */
-  height: auto; /* Автоматическая высота для адаптивности */
-  padding: 112px 72px; /* Отступы для корректного отображения */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  padding: 112px 72px;
 }
 
-/* Кнопки переключения */
 .gallery-btn {
-  background-color: transparent; /* Оранжевый */
+  background-color: transparent;
   border: none;
   color: white;
   font-size: 2rem;
@@ -52,7 +50,7 @@
 }
 
 .gallery-btn img {
-  width: 100%; /* Изображение занимает всю кнопку */
+  width: 100%;
   height: auto;
 }
 
@@ -60,7 +58,6 @@
   background-color: #e09000;
 }
 
-/* Блок изображения */
 .gallery-image-wrapper {
   width: 50%;
   padding: 10px;
@@ -76,7 +73,14 @@
   display: block;
 }
 
-/* Адаптивность для мобильной версии */
+.gallery-link {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 768px) {
   .gallery-section {
     background-image: url('/img/gallery/gallery-frame-mobile.png');
@@ -85,34 +89,34 @@
   }
 
   .gallery-title {
-    font-size: 1.5rem; /* Меньше размер шрифта для мобильных устройств */
+    font-size: 1.5rem;
   }
 
   .gallery-btn {
     width: 40px;
     height: 40px;
-    font-size: 1.5rem; /* Уменьшаем кнопки для мобильных */
+    font-size: 1.5rem;
   }
 
   .gallery-image-wrapper {
-    width: 90%; /* Увеличиваем изображение на мобильных */
+    width: 90%;
   }
 
   .btn-img-desktop {
-    display: none; /* Скрыть изображения для десктопа на мобильных устройствах */
+    display: none;
   }
 
   .btn-img-mobile {
-    display: block; /* Показать изображения для мобильных на мобильных устройствах */
+    display: block;
   }
 }
 
 @media (min-width: 769px) {
   .btn-img-desktop {
-    display: block; /* Показать изображения для десктопа на десктопах */
+    display: block;
   }
 
   .btn-img-mobile {
-    display: none; /* Скрыть изображения для мобильных на десктопах */
+    display: none;
   }
 }

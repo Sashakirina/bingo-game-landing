@@ -42,42 +42,57 @@
 }
 
 .gallery-container {
-   position: relative;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 
   @include media(desktop) {
     display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: auto;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
   }
 }
 
 .gallery-btn {
   background-color: transparent;
   border: none;
-  width: 6px;
-  height: 12px;
+  width: 34px;
+  height: 24px;
+  position: absolute; /* Додано абсолютне позиціонування */
 
   @include media(mobile) {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 24px;
+    height: 24px;
   }
 
   @include media(desktop) {
+
     width: 64px;
     height: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 64px;
-    margin-right: 64px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
+}
+
+.prev-btn {
+  left: 10px; /* Розташування зліва */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next-btn {
+  right: 10px; /* Розташування справа */
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .gallery-btn img {
@@ -94,17 +109,16 @@
   border: 2px solid #ffa800;
   border-radius: 4px;
   overflow: hidden;
+  width: 100%;
+  height: auto;
+  text-align: center;
 
   @include media(mobile) {
-    width: 90%;
-    width: 100%;
-    height: auto;
   }
 
   @include media(desktop) {
     width: 70%;
     border: 4px solid #ffa800;
-    border-radius: 4px;
   }
 }
 

@@ -8,24 +8,38 @@ function initGallery() {
     'img/gallery/gallery-3.png',
     'img/gallery/gallery-4.png',
   ];
+
+  console.log('Images array:', images); // Log the images array
+
+  const links = document.querySelectorAll('.gallery-link');
   let currentImageIndex = 0;
 
-  if (!galleryContainer || !prevBtn || !nextBtn) {
+  if (!galleryContainer || !prevBtn || !nextBtn || !links.length) {
     console.error('Gallery elements not found in the DOM');
     return;
   }
 
-  const galleryImage = galleryContainer.querySelector('.gallery-image');
-  galleryImage.src = images[currentImageIndex];
+  const updateGallery = index => {
+    links.forEach((link, i) => {
+      if (i === index) {
+        link.classList.remove('hidden');
+        galleryContainer.querySelector('.gallery-image').src = images[i];
+      } else {
+        link.classList.add('hidden');
+      }
+    });
+  };
+
+  updateGallery(currentImageIndex);
 
   prevBtn.addEventListener('click', () => {
     currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    galleryImage.src = images[currentImageIndex];
+    updateGallery(currentImageIndex);
   });
 
   nextBtn.addEventListener('click', () => {
     currentImageIndex = (currentImageIndex + 1) % images.length;
-    galleryImage.src = images[currentImageIndex];
+    updateGallery(currentImageIndex);
   });
 
   // Initialize baguetteBox for lightbox functionality

@@ -8,6 +8,8 @@
 }
 
 .download-title {
+  width: 170px;
+  margin: 0 auto;
   color: $_golden;
   text-align: center;
   font-size: 36px;
@@ -16,6 +18,7 @@
   margin-bottom: 32px;
 
   @include media(desktop) {
+    width: auto;
     font-size: 48px;
     line-height: 64px;
     margin-bottom: 64px;
@@ -29,14 +32,16 @@
   gap: 24px;
 }
 
-.download-btn {
+.download-btn-link {
   background-color: #d4a100;
+  color: #0a1633;
   border-radius: 12px;
   border: none;
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
   padding: 23px 32px;
+  text-align: center; /* Центрирование текста */
 
   @include media(desktop) {
     display: flex;

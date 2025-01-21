@@ -1,0 +1,16 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  @include media(desktop) {
+    flex-wrap: row;
+    
+  }
+}
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  @include media(desktop) {
+    flex-wrap: row;
+  }
+}

@@ -50,8 +50,8 @@
 
   @include media(desktop) {
     gap: 20px;
-    width: 654px; /* Устанавливаем фиксированную ширину для блока с текстом */
-    height: 636px; /* Устанавливаем фиксированную высоту для блока с текстом */
+    width: 654px;
+    height: 636px;
   }
 }
 
@@ -81,8 +81,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 461px; /* Устанавливаем фиксированную ширину для изображения */
-  height: 636px; /* Устанавливаем фиксированную высоту для изображения */
+  width: 461px;
+  height: 636px; 
 }
 
 .reviews-picture {

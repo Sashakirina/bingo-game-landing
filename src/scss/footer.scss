@@ -7,30 +7,30 @@
 
   @include media(desktop) {
     padding: 0;
-    flex-direction: row; /* На десктопах элементы в строку */
-    align-items: center; /* Выравниваем по вертикали */
-    justify-content: flex-end; /* Выравниваем в конце */
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 
 .footer-nav {
   display: flex;
-  flex-direction: column; /* Делаем элементы в одну строку */
-  align-items: center; /* Выравниваем элементы по вертикали */
-  justify-content: center; /* Центрируем на мобильных */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 40px 38px;
   gap: 24px;
 
   @include media(desktop) {
-    flex-direction: row; /* На десктопах элементы в строку */
-    justify-content: flex-end; /* На десктопах выравниваем вправо */
+    flex-direction: row;
+    justify-content: flex-end;
     padding: 36px 30px;
-    gap: 12px; /* Промежуток между пунктами навигации */
+    gap: 12px;
   }
 }
 
 .footer-nav .separator {
-  margin: 0 8px; /* Добавляем небольшой отступ */
+  margin: 0 8px; 
 }
 
 .footer-container p {

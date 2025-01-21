@@ -68,7 +68,7 @@
   border: none;
   width: 34px;
   height: 24px;
-  position: absolute; /* Додано абсолютне позиціонування */
+  position: absolute;
 
   @include media(mobile) {
     width: 24px;
@@ -87,13 +87,13 @@
 }
 
 .prev-btn {
-  left: 10px; /* Розташування зліва */
+  left: 10px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .next-btn {
-  right: 10px; /* Розташування справа */
+  right: 10px; 
   top: 50%;
   transform: translateY(-50%);
 }

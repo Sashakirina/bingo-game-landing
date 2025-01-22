@@ -5,6 +5,8 @@ function initGallery() {
   const slides = galleryContainer.querySelectorAll('.gallery-slide');
   const images = Array.from(slides).map(slide => slide.src);
   let currentImageIndex = 0;
+  let startX = 0;
+  let endX = 0;
 
   if (!galleryContainer || !prevBtn || !nextBtn || !slides.length) {
     console.error('Gallery elements not found in the DOM');
@@ -22,6 +24,27 @@ function initGallery() {
 
   nextBtn.addEventListener('click', () => {
     currentImageIndex = (currentImageIndex + 1) % images.length;
+    galleryImage.src = images[currentImageIndex];
+    updateSlides(currentImageIndex);
+  });
+
+  galleryContainer.addEventListener('touchstart', event => {
+    startX = event.touches[0].clientX;
+  });
+
+  galleryContainer.addEventListener('touchmove', event => {
+    endX = event.touches[0].clientX;
+  });
+
+  galleryContainer.addEventListener('touchend', () => {
+    if (startX - endX > 50) {
+      // Swipe left
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+    } else if (endX - startX > 50) {
+      // Swipe right
+      currentImageIndex =
+        (currentImageIndex - 1 + images.length) % images.length;
+    }
     galleryImage.src = images[currentImageIndex];
     updateSlides(currentImageIndex);
   });

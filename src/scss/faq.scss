@@ -1,12 +1,12 @@
 .faq-section {
-   margin-top: 64px;
+  margin-top: 64px;
   margin-bottom: 88px;
-  margin-left: 36px;
+  margin-left: 16px;
   margin-right: 16px;
 
   @include media(desktop) {
     margin-top: 120px;
-    margin-left: 70px;
+    margin-left: 30px;
     margin-right: 30px;
   }
 }
@@ -28,6 +28,7 @@
 
 .faq-list li {
   padding: 22px 64px;
+
   background-color: rgba(25, 52, 116, 1);
   color: white;
   font-weight: 700;
@@ -46,21 +47,41 @@
 }
 
 .faq-toggle {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
+  position: relative;
   padding: 0;
+
+  @include media(desktop) {
+    width: 24px;
+    height: 24px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0; /* Положение справа */
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #f49a38; /* Цвет стрелки */
+    border-bottom: 2px solid #f49a38;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: transform 0.3s ease;
+  }
 }
 
-.faq-toggle img {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
+.faq-list li.open .faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(225deg); /* Поворачиваем стрелку */
 }
 
 .faq-answer {
   margin-top: 16px;
-  display: none; 
+  display: none;
   font-size: 20px;
   font-weight: 400;
   color: #e6e6e6;
@@ -68,10 +89,6 @@
 
 .faq-list li.open .faq-answer {
   display: block;
-}
-
-.faq-list li.open .faq-toggle img {
-  transform: rotate(180deg);
 }
 
 .faq-list li::before {
@@ -84,12 +101,4 @@
   background-color: #861015;
   transform: translateY(-50%) rotate(45deg);
   border-radius: 2px;
-}
-.faq-toggle img {
-  width: 12px;
-  height: 6px;
-}
-
-.faq-toggle img {
-  object-fit: contain;
 }

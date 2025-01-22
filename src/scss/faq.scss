@@ -60,37 +60,36 @@
 
 .faq-answer {
   margin-top: 16px;
-  display: none; /* По умолчанию скрыт */
+  display: none; 
   font-size: 20px;
   font-weight: 400;
   color: #e6e6e6;
 }
 
 .faq-list li.open .faq-answer {
-  display: block; /* Показывать при раскрытии */
+  display: block;
 }
 
 .faq-list li.open .faq-toggle img {
-  transform: rotate(180deg); /* Поворот стрелки */
+  transform: rotate(180deg);
 }
 
 .faq-list li::before {
   content: '';
   position: absolute;
   top: 50%;
-  left: -27px; /* Расстояние от левого края */
-  width: 55px; /* Ширина ромба */
-  height: 55px; /* Высота ромба */
-  background-color: #861015; /* Цвет ромба */
-  transform: translateY(-50%) rotate(45deg); /* Центрирование и поворот ромба */
-  border-radius: 2px; /* Скругление углов ромба */
+  left: -27px;
+  width: 55px;
+  height: 55px;
+  background-color: #861015;
+  transform: translateY(-50%) rotate(45deg);
+  border-radius: 2px;
 }
 .faq-toggle img {
-  width: 12px; /* Укажите желаемую ширину */
-  height: 6px; /* Укажите желаемую высоту */
+  width: 12px;
+  height: 6px;
 }
 
-/* Дополнительно можно задать, чтобы иконка не растягивалась */
 .faq-toggle img {
-  object-fit: contain; /* Обеспечивает корректное отображение изображения */
+  object-fit: contain;
 }

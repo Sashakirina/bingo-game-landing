@@ -64,10 +64,10 @@
 }
 
 .gallery-btn {
+  box-sizing: content-box;
+
   background-color: transparent;
   border: none;
-  width: 34px;
-  height: 24px;
   position: absolute;
 
   @include media(mobile) {
@@ -84,8 +84,12 @@
     margin-left: 50px;
     margin-right: 50px;
   }
-}
 
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
 .prev-btn {
   left: 10px;
   top: 50%;
@@ -144,13 +148,22 @@
 
   @include media(desktop) {
     display: block;
+    // width: 64px;
+    // height: 64px;
   }
 }
 
 .btn-img-mobile {
+  // width: 24px;
+  // height: 24px;
   display: block;
 
   @include media(desktop) {
     display: none;
   }
+}
+
+.gallery-btn img {
+  width: 100%;
+  height: auto;
 }

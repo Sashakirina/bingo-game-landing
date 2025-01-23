@@ -48,6 +48,8 @@
 
 .faq-question h3 {
   padding: 8px 0px 8px 30px;
+  font-size: 24px;
+  line-height: 36px;
   width: 230px;
   @include media(desktop) {
     padding: 22px 30px 22px 64px;
@@ -58,8 +60,6 @@
 
 .faq-toggle {
   display: inline-block;
-  // width: 44px;
-  // height: 44px;
   background: none;
   border: none;
   cursor: pointer;
@@ -67,41 +67,45 @@
   padding: 0;
 
   @include media(desktop) {
-    // width: 24px;
-    // height: 24px;
+
   }
 
   &::after {
     content: '';
     position: absolute;
     top: 24.5px;
-    right: 10px; /* Положение справа */
+    right: 10px;
     width: 22px;
     height: 22px;
-    border-right: 2px solid #f49a38; /* Цвет стрелки */
+    border-right: 2px solid #f49a38;
     border-bottom: 2px solid #f49a38;
     transform: translate(-50%, -50%) rotate(45deg);
     transition: transform 0.3s ease;
     @include media(desktop) {
       width: 12px;
       height: 12px;
-       top: 37px;
-    right: 37px; /* Положение справа */
-
+      top: 37px;
+      right: 37px;
     }
   }
 }
 
 .faq-list li.open .faq-toggle::after {
-  transform: translate(-50%, -50%) rotate(225deg); /* Поворачиваем стрелку */
+  transform: translate(-50%, -50%) rotate(225deg);
 }
 
 .faq-answer {
-  margin-top: 16px;
+  padding: 24px 8px 8px 30px;
   display: none;
   font-size: 20px;
   font-weight: 400;
-  color: #e6e6e6;
+  line-height: 30px;
+  color: #fff;
+  @include media(desktop) {
+    padding: 22px 30px 22px 64px;
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .faq-list li.open .faq-answer {
@@ -120,7 +124,8 @@
   border-radius: 2px;
 
   @include media(desktop) {
-    top: 50%;
+    top: 39px;
+
     left: -27px;
     width: 55px;
     height: 55px;
